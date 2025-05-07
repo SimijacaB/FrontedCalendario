@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './UI/components/app.component';
 
-const routes: Routes = [ 
+export const routes: Routes = [ 
     { path: '', component: AppComponent } 
 ];
 

@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { ApiFestivosService } from '../../insfraestructure/services/apiFestivos.service';
+import { FormsModule } from '@angular/forms';       // Necesario para ngModel
+import { CommonModule } from '@angular/common';   
+
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [FormsModule, CommonModule]
 })
 export class AppComponent {
   title = 'FrontedCalendario';
