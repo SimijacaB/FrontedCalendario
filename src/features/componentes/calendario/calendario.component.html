@@ -1,0 +1,13 @@
+<div class="calendario-container">
+    <mat-toolbar color="primary">
+      <span>Calendario de Festivos</span>
+    </mat-toolbar>
+  
+    <div class="content">
+      <app-selector-fecha 
+        (fechaSeleccionada)="onFechaSeleccionada($event)">
+      </app-selector-fecha>
+      
+      <app-lista-eventos [eventos]="festivos"></app-lista-eventos>
+    </div>
+  </div>

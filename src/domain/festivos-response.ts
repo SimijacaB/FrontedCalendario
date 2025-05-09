@@ -1,16 +1,14 @@
 export interface FestivoResponse {
-    id: number;     
+    id: number;
     nombre: string;
     dia: number;
     mes: number;
     diasPascua: number;
     idTipo: number;
-    tipoFestivo: [TipoFestivo[]];
+    tipoFestivo: TipoFestivo[];
 }
 
-
 export interface TipoFestivo {
-    id: number;     
+    id: number;
     tipo: string;
-    
 }

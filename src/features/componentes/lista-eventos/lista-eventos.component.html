@@ -1,0 +1,24 @@
+<mat-card class="lista-festivos">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>calendar_today</mat-icon>
+      Listado de Festivos
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let evento of eventos" class="festivo-item">
+        <div matListItemTitle>{{evento.nombre}}</div>
+        <div matListItemLine>
+          <span class="fecha">{{evento.dia}}/{{evento.mes}}</span>
+          <span class="tipo" *ngIf="evento.tipoFestivo">• {{evento.tipoFestivo}}</span>
+        </div>
+      </mat-list-item>
+
+      <mat-list-item *ngIf="eventos.length === 0">
+        No hay festivos registrados
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
